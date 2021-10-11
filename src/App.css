@@ -23,3 +23,14 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.detail-item{
+  position: relative;
+  padding-left: 10%;
+}
+
+.detail-name{
+  margin-bottom: 10%;
+  margin-top: -5%;
+  margin-left: 65%;
+}

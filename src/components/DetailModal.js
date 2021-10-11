@@ -1,4 +1,5 @@
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import '../App.css';
 
 function DetailModal({ modal, toggle, data, loading, error }) {
     return (
@@ -8,7 +9,9 @@ function DetailModal({ modal, toggle, data, loading, error }) {
                 {loading && "Loading..."}
                 {error && "Error " + error}
                 {data && data.pokemon.evolutions && data.pokemon.evolutions.length > 0 && data.pokemon.evolutions.map((item, id) => (
-                    <img key={id} src={item.image} alt="" className="item-img" />
+                    <div className="detail-item"><img key={id} src={item.image} alt="" className="item-img" />
+                        <div className="detail-name">{item.name}</div>
+                    </div>
                 ))
                 }
                 {data && !data.pokemon.evolutions
