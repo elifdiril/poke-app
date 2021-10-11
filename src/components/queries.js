@@ -10,3 +10,16 @@ export const POKEMONS_QUERY = gql`
     }
   }
 `;
+
+export const POKEMON_DETAIL_QUERY = gql`
+query pokemon($id: String){
+  pokemon(id: $id){
+   name
+  evolutions{
+    name
+    image
+    maxHP
+  }
+  }
+}
+`;

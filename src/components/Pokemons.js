@@ -20,7 +20,7 @@ function Pokemons() {
       <h1>Pokemons</h1>
       <div className="pokemonList">
         {data.pokemons.map((item) => (
-          <Item item={item} key={item.id} />
+          <Item key={item.id} item={item}  />
         ))}
       </div>
     </div>
